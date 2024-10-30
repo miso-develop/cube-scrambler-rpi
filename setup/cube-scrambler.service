@@ -1,0 +1,14 @@
+[Unit]
+Description=cube-scrambler
+After=syslog.target network-online.target
+
+[Service]
+Type=simple
+User=root
+ExecStart=/bin/bash ./index.sh
+WorkingDirectory=/opt/cube-scrambler-rpi
+Restart=on-failure
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target
