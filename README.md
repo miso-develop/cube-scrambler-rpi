@@ -59,7 +59,7 @@ https://gist.github.com/user-attachments/assets/5dd3c657-1c7e-4b9c-b8ae-90420bf9
 ## 作り方
 Raspberry Pi、LEGOロボットに分けてそれぞれのセットアップ方法を公開しています。  
 
-### [➡ Raspberry Pi (elcika)](https://elchika.com/article/79850c26-e2ab-438d-8e88-f17ba5b5d3e7/)
+### [➡ Raspberry Pi (elcika)](https://elchika.com/article/98b4cc3e-b154-4638-9740-ee91da24b8e9/)
 
 ### [➡ LEGOロボット](https://drive.google.com/file/d/1LfaUZmzZbCQRWulfV_bqecyGe_8wCMht/view)
 

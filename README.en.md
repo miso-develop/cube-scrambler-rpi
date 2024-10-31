@@ -59,7 +59,7 @@ You can focus on the step you want to practice.
 ## Assembly Instructions
 Separate sections for Raspberry Pi and LEGO robots are available to show how to set up each.  
 
-### [➡ Raspberry Pi (elchika)](https://elchika.com/article/79850c26-e2ab-438d-8e88-f17ba5b5d3e7/)
+### [➡ Raspberry Pi (elchika)](https://elchika.com/article/98b4cc3e-b154-4638-9740-ee91da24b8e9/)
 
 ### [➡ LEGO Robot](https://drive.google.com/file/d/1LfaUZmzZbCQRWulfV_bqecyGe_8wCMht/view)
 
