@@ -8,7 +8,7 @@
 
 キューブを自動で崩したり揃えたりする、LEGOとRaspberry Piで作れるロボットです。  
 
-<div align="center"><img src="https://user-images.githubusercontent.com/22117028/262297192-1c5727ee-eac5-48f8-9f05-78393aee8d66.gif" alt="Checker cube solve demo" width="800" /></div>
+https://gist.github.com/user-attachments/assets/5dd3c657-1c7e-4b9c-b8ae-90420bf9c9a7
 
 <br>
 
