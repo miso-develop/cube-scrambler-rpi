@@ -8,7 +8,7 @@
 
 This is a robot that can be built with LEGO and Raspberry Pi that automatically scramble and solve cube.  
 
-https://gist.github.com/user-attachments/assets/5dd3c657-1c7e-4b9c-b8ae-90420bf9c9a7
+https://gist.github.com/user-attachments/assets/ec00468d-7e7f-4045-a26f-624f176d802e
 
 <br>
 
