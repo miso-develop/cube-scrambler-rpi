@@ -1,6 +1,7 @@
+import { config } from "../../config.js"
+import { z } from "zod"
 import { Gpio } from "pigpio"
 import type { Servo } from "../Device.js"
-import { z } from "zod"
 import { log, dbg, dev, sleep, envBoolean, envNumber, shuffleArray, getYYYYMMDD, getHHMMSS, formatJstDate, random, stoppableFunc, sequenciableFuncs, reverseObject, arrayEquals, timeoutClosure } from "../../utils.js"
 
 type ServoSpec = {
@@ -13,14 +14,14 @@ type ServoSpec = {
 
 export class GeekServo implements Servo {
 	public readonly SERVO_SPEC = {
-		angle: Number(process.env.SERVO_SPEC_ANGLE) || 270,
+		angle: Number(config.SERVO_SPEC_ANGLE),
 		pulse: {
-			max: Number(process.env.SERVO_SPEC_PLUS_MAX) || 2400,
-			min: Number(process.env.SERVO_SPEC_PLUS_MIN) || 580,
+			max: Number(config.SERVO_SPEC_PLUS_MAX),
+			min: Number(config.SERVO_SPEC_PLUS_MIN),
 		},
 	} as const satisfies ServoSpec
 	
-	private readonly _TURN_SLEEP_MSEC = Number(process.env.SERVO_TURN_SLEEP_MSEC) || 200
+	private readonly _TURN_SLEEP_MSEC = Number(config.SERVO_TURN_SLEEP_MSEC)
 	
 	private readonly _servo: Gpio
 	
@@ -32,8 +33,8 @@ export class GeekServo implements Servo {
 	
 	public async turn(angle: number): Promise<void> {
 		const duty = this._angle2duty(angle)
-		this._servo.servoWrite(duty)
 		// log(angle, duty) // DEBUG:
+		this._servo.servoWrite(duty)
 		
 		await sleep(this._TURN_SLEEP_MSEC) // MEMO: 補正sleep
 	}

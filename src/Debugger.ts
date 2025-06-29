@@ -12,9 +12,6 @@ import type { CubeRobot } from "./CubeRobot/CubeRobot.js"
 import type { MoveManager } from "./MoveManager/MoveManager.js"
 import type { SequenceGenerator } from "./SequenceGenerator/SequenceGenerator.js"
 
-import { RPiZeroW } from "./Device/RaspberryPi/RPiZeroW.js"
-import { GeekServo } from "./Device/RaspberryPi/GeekServo.js"
-
 import { StandServo } from "./CubeRobot/Servo/StandServo.js"
 import { ArmServo } from "./CubeRobot/Servo/ArmServo.js"
 
@@ -50,8 +47,6 @@ export class Debugger {
 	public static cubeRobot: CubeRobot
 	public static moveManager: MoveManager
 	public static sequenceGenerator: typeof SequenceGenerator
-	
-	public static servo: Servo
 	
 	public static standServo: StandServo
 	public static armServo: ArmServo
@@ -226,8 +221,8 @@ export class Debugger {
 		
 		"a": async () => this.demos(),
 		"s": async () => {},
-		// "d": async () => this.servo.turn(26, 0, 86 + 12),
-		// "f": async () => this.servo.turn(26, 0, 86 * 2 + 12),
+		"d": async () => {},
+		"f": async () => {},
 		
 		"z": async () => await this.device["_led"](0x888800),
 		"x": async () => await this.device["_led"](0x880088),

@@ -1,6 +1,6 @@
 import { config } from "../../config.js"
 import { z, ZodError } from "zod"
-import type { Servo } from "../../Device/Device.js"
+import type { Device, Servo } from "../../Device/Device.js"
 import { log, dbg, dev, sleep, envBoolean, envNumber, shuffleArray, getYYYYMMDD, getHHMMSS, formatJstDate, random, stoppableFunc, sequenciableFuncs, reverseObject, arrayEquals, timeoutClosure } from "../../utils.js"
 import { TurnDirection, ArmState, Face, FacePosition, FullFace, FaceLine, CubeState, BASIC_MOVE_LIST, SLICE_MOVE_LIST, WIDE_MOVE_LIST, ROTATION_MOVE_LIST, MOVE_LIST, BasicMove, SliceMove, WideMove, RotationMove, Move, ROBOT_MOVE_LIST, RobotMove, Facelets, Sequence, CubeChampleApiResult, ScrambleData, SCRAMBLE_TYPE, ScrambleType, SCRAMBLE_TYPE_KEYS, SCRAMBLE_TYPE_REVERSE, StepData, ApiServiceFunction, ApiServiceRegistrationFormat, CliServiceFunction, CliServiceRegistrationFormat } from "../../types.js"
 
@@ -20,8 +20,8 @@ export class StandServo {
 	
 	
 	
-	constructor(servo: Servo) {
-		this._servo = servo
+	constructor(device: Device) {
+		this._servo = device.standServo
 		this._angle = this._INIT_ANGLE
 	}
 	

@@ -69,7 +69,7 @@ export type Config = {
 
 const DEFAULT_CONFIG = {
 	BUTTON_ACTION: "random",
-	SERVER_PORT: 3001,
+	SERVER_PORT: 443,
 	STAND_SERVO_PIN: "default",
 	ARM_SERVO_PIN: "default",
 	BUTTON_PIN: "default",

@@ -13,8 +13,6 @@ export class CubeRobot {
 	
 	constructor() {
 		this.device = deviceFactory()
-		this._standServo = new StandServo(this.device.standServo)
-		this._armServo = new ArmServo(this.device.armServo)
 	}
 	
 	
@@ -26,8 +24,13 @@ export class CubeRobot {
 	
 	
 	public async init(): Promise<void> {
-		await this._standServo.init()
-		await this.ready()
+		this._standServo = new StandServo(this.device)
+		this._armServo = new ArmServo(this.device)
+		
+		await Promise.all([
+			this._standServo.init(),
+			this.ready(),
+		])
 	}
 	
 	public async ready(): Promise<void> {

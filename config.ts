@@ -5,7 +5,7 @@ export default {
 	BUTTON_ACTION: "random",
 	
 	// Web UIポート番号の指定
-	SERVER_PORT: 80,
+	SERVER_PORT: 443,
 	
 	// デバイスへ接続するサーボモーターの制御ピン指定
 	STAND_SERVO_PIN: "default",
@@ -26,10 +26,10 @@ export default {
 	ARM_READY_ANGLE: 270, // ここでアーム側サーボモーターの角度を微調整
 	
 	ARM_PULL_SLEEP_MSEC: 200, // アーム動作のsleep
-	// ARM_PULL_SLEEP_MSEC: 300, // アームの動作が不安定な場合はこちらを使用
+	// ARM_PULL_SLEEP_MSEC: 300, // アームの動作が不安定な場合はこちらを使用（ネットワーク重めの環境等）
 	
 	SERVO_TURN_SLEEP_MSEC: 500, // スタンド、アーム共通のsleep
-	// SERVO_TURN_SLEEP_MSEC: 600, // モーターの動作が不安定な場合はこちらを使用
+	// SERVO_TURN_SLEEP_MSEC: 600, // アームの動作が不安定な場合はこちらを使用（ネットワーク重めの環境等）
 	
 	
 	
